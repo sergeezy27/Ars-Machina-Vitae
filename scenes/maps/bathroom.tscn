@@ -23,4 +23,4 @@ ConnectedMapPath = "res://scenes/maps/apartment.tscn"
 ConnectedSpawnPointPath = "SpawnPoint2"
 
 [node name="Player" parent="." instance=ExtResource("2_cx7rb")]
-position = Vector2(-25, 1)
+position = Vector2(-29, 1)

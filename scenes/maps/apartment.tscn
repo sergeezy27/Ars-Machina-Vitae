@@ -32,4 +32,4 @@ position = Vector2(-24, -15)
 position = Vector2(72, 41)
 
 [node name="SpawnPoint2" type="Marker2D" parent="."]
-position = Vector2(-23, -72)
+position = Vector2(-23, -79)
