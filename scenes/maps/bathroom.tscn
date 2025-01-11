@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=4 uid="uid://cpfpdprw787a5"]
+
+[ext_resource type="TileSet" uid="uid://cc3bbxq72q8d2" path="res://assets/tilesets/apartment.tres" id="1_p162o"]
+[ext_resource type="PackedScene" uid="uid://b644irmhyk54a" path="res://scenes/core/player.tscn" id="2_cx7rb"]
+[ext_resource type="PackedScene" uid="uid://csmras0mgns4u" path="res://scenes/portals/apartment_door.tscn" id="2_dtsa1"]
+
+[node name="Room1" type="Node2D"]
+
+[node name="GroundLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD9/wAABAABAAEAAAD9//3/BAABAAEAAAD9//7/BAABAAEAAAD9////BAABAAEAAAD9/wEABAABAAEAAAD9/wIABAABAAEAAAD+/wIABAABAAEAAAD//wIABAABAAEAAAAAAAIABAABAAEAAAABAAIABAABAAEAAAABAAEABAABAAEAAAACAAEABAABAAEAAAACAAAABAABAAEAAAACAP//BAABAAEAAAACAP7/BAABAAEAAAACAP3/BAABAAEAAAAAAP3/BAABAAEAAAD///3/BAABAAEAAAD+//7/BAABAAEAAAD+////BAABAAEAAAD/////BAABAAEAAAAAAP//BAABAAEAAAABAP//BAABAAEAAAABAP7/BAABAAEAAAAAAP7/BAABAAEAAAD///7/BAABAAEAAAD+/wAABAABAAEAAAD+/wEABAABAAEAAAD//wEABAABAAEAAAAAAAEABAABAAEAAAABAAAABAABAAEAAAAAAAAABAABAAEAAAD//wAABAABAAEAAAACAAIABAABAAEAAAD+//3/BAABAAEAAAABAP3/BAABAAEAAAA=")
+tile_set = ExtResource("1_p162o")
+
+[node name="ObjectLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD9//z/BAABAAAAAAD+//z/BAABAAAAAAD///z/BAABAAAAAAAAAPz/BAABAAAAAAABAPz/BAABAAAAAAACAPz/BAABAAAAAAADAPz/BAACAAAAAAD8//z/BAAAAAAAAAD9/wMABAABAAIAAAD+/wMABAABAAIAAAD//wMABAABAAIAAAAAAAMABAABAAIAAAABAAMABAABAAIAAAACAAMABAABAAIAAAADAAMABAACAAIAAAD8/wMABAAAAAIAAAD8/wIABAAAAAEAAAD8//7/BAAAAAEAAAD8//3/BAAAAAEAAAADAAIABAAAAAEAAAADAAEABAAAAAEAAAADAAAABAAAAAEAAAADAP//BAAAAAEAAAADAP7/BAAAAAEAAAADAP3/BAAAAAEAAAABAP3/BgACAAEAAAD+//3/BgADAAAAAAACAAIABgAEAAEAAAD9/wIABgAEAAEAAAD///3/BgAEAAAAAAD8/wEABAAAAAEAAAD8////BAAAAAEAAAA=")
+tile_set = ExtResource("1_p162o")
+
+[node name="InteractiveLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_p162o")
+
+[node name="BathroomDoor" parent="InteractiveLayer" instance=ExtResource("2_dtsa1")]
+position = Vector2(-56, 8)
+ConnectedMapPath = "res://scenes/maps/apartment.tscn"
+ConnectedSpawnPointPath = "SpawnPoint2"
+
+[node name="Player" parent="." instance=ExtResource("2_cx7rb")]
+position = Vector2(-25, 1)

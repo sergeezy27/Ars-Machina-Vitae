@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://csmras0mgns4u"]
+
+[ext_resource type="Texture2D" uid="uid://bel1geafmbrco" path="res://assets/door.png" id="1_w5l1n"]
+[ext_resource type="Script" path="res://scripts/core/Portal.cs" id="1_x74bj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqcub"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4r1mo"]
+size = Vector2(40, 38)
+
+[node name="ApartmentDoor" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_x74bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w5l1n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bqcub")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+shape = SubResource("RectangleShape2D_4r1mo")
+one_way_collision_margin = 0.0
