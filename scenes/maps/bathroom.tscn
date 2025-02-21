@@ -20,7 +20,7 @@ tile_set = ExtResource("1_p162o")
 [node name="BathroomDoor" parent="InteractiveLayer" instance=ExtResource("2_dtsa1")]
 position = Vector2(-56, 8)
 ConnectedMapPath = "res://scenes/maps/apartment.tscn"
-ConnectedSpawnPointPath = "SpawnPoint2"
+ConnectedSpawnPointName = "SpawnPoint2"
 
 [node name="Player" parent="." instance=ExtResource("2_cx7rb")]
 position = Vector2(-25, 1)
