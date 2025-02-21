@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=4 uid="uid://h7rv34uq7gg4"]
+[gd_scene load_steps=5 format=4 uid="uid://h7rv34uq7gg4"]
 
 [ext_resource type="TileSet" uid="uid://cc3bbxq72q8d2" path="res://assets/tilesets/apartment.tres" id="1_p162o"]
 [ext_resource type="PackedScene" uid="uid://b644irmhyk54a" path="res://scenes/core/player.tscn" id="2_1lfsp"]
 [ext_resource type="PackedScene" uid="uid://csmras0mgns4u" path="res://scenes/portals/apartment_door.tscn" id="2_65vuo"]
+[ext_resource type="PackedScene" uid="uid://bxb55ay3syt6w" path="res://scenes/NPCs/marcus.tscn" id="3_g7so4"]
 
-[node name="Bathroom" type="Node2D"]
-position = Vector2(1, 0)
+[node name="Room1" type="Node2D"]
 
 [node name="GroundLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD9/wAABAABAAEAAAD9//3/BAABAAEAAAD9//7/BAABAAEAAAD9////BAABAAEAAAD9/wEABAABAAEAAAD9/wIABAABAAEAAAD+/wIABAABAAEAAAD//wIABAABAAEAAAAAAAIABAABAAEAAAABAAIABAABAAEAAAABAAEABAABAAEAAAACAAEABAABAAEAAAACAAAABAABAAEAAAACAP//BAABAAEAAAACAP7/BAABAAEAAAACAP3/BAABAAEAAAAAAP3/BAABAAEAAAD///3/BAABAAEAAAD+//7/BAABAAEAAAD+////BAABAAEAAAD/////BAABAAEAAAAAAP//BAABAAEAAAABAP//BAABAAEAAAABAP7/BAABAAEAAAAAAP7/BAABAAEAAAD///7/BAABAAEAAAD+/wAABAABAAEAAAD+/wEABAABAAEAAAD//wEABAABAAEAAAAAAAEABAABAAEAAAABAAAABAABAAEAAAAAAAAABAABAAEAAAD//wAABAABAAEAAAACAAIABAABAAEAAAD+//3/BAABAAEAAAABAP3/BAABAAEAAAA=")
@@ -23,5 +23,8 @@ position = Vector2(-56, 8)
 ConnectedMapPath = "res://scenes/maps/apartment.tscn"
 ConnectedSpawnPointPath = "SpawnPoint1"
 
+[node name="Marcus" parent="InteractiveLayer" instance=ExtResource("3_g7so4")]
+position = Vector2(40, -15)
+
 [node name="Player" parent="." instance=ExtResource("2_1lfsp")]
-position = Vector2(-29, 1)
+position = Vector2(-26, 1)
