@@ -1,6 +1,14 @@
-# Godot 4+ specific ignores
-.godot/
-/android/
-
-# Mac specific ignores
-.DS_Store
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+UserSettings/
+MemoryCaptures/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
